@@ -1,0 +1,17 @@
+spring: 
+  application: 
+    name: hello_service
+ 
+server: 
+  port: 8888
+  servlet:
+    context-path: /hello-service
+ 
+eureka:
+  client: 
+    serviceUrl: 
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka} 
+  instance: 
+    appname: hello_service
+    preferIpAddress: false
+    statusPageUrlPath: /health
